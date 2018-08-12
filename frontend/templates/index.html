@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Instagram Crawler</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% if message %}
+  <h1>Message: {{ message }}</h1>
+  <hr>
+  {% endif %}
+
+  <h1>Enqueue userid</h1>
+  <form method="post" action="/apis/enqueue_userid">
+    <label>User ID:
+      <input type="text" name="userid" placeholder="wingyi127" />
+    </label>
+    <button type="submit">Send</button>
+  </form>
+
+</body>
+</html>
